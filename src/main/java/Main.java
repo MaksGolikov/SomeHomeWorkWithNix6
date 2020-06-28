@@ -1,3 +1,5 @@
+import service.AddService;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +9,10 @@ public class Main {
         int firstNumber = scanner.nextInt();
         System.out.print("Enter b: ");
         int secondNumber = scanner.nextInt();
-        int sum = firstNumber + secondNumber;
+
+        AddService addService = new AddService();
+        int sum = addService.add(firstNumber, secondNumber);
+
         System.out.print("Result: ");
         System.out.println(sum);
     }
