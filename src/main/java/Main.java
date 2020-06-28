@@ -10,6 +10,7 @@ public class Main {
         Data data = new Data(scanner);
         AddService addService = new AddService();
 
+
         int firstNumber = data.input("Enter a: ");
         int secondNumber = data.input("Enter b: ");
         int sum = addService.add(firstNumber, secondNumber);
