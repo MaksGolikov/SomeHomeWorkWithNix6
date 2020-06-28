@@ -11,11 +11,10 @@ public class Main {
         Data data = new DataImpl(scanner);
         Service addService = new AddServiceImpl();
 
-        int firstNumber = data.input("Enter a: ");
-        int secondNumber = data.input("Enter b: ");
-        int sum = addService.calculateTwoNumbers(firstNumber, secondNumber);
 
-        data.print("Result: ");
-        data.print(sum);
+        Controller controller = new Controller();
+        controller.initialization(data);
+        controller.calculate(addService);
+        controller.done(data);
     }
 }
